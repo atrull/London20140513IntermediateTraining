@@ -1,0 +1,15 @@
+# This first line declares the "source" from where bundler should download Ruby
+# gems. https://rubygems.org is the public, community Ruby gem server. 99.9% of
+# the time, you will want to use this URL.
+source 'https://rubygems.org'
+
+# This line tells bundler to install version 3.4.0 of the ChefSpec gem from the
+# source above. This corresponds to http://rubygems.org/gems/chefspec/versions/3.4.0,
+# which is the latest published version at the time of this Gemfile's creation.
+#
+# Bundler will automatically pull in ChefSpec and all of its dependencies for
+# you. There is no need to specify each of ChefSpec's dependencies manually.
+#
+# If you wanted to install a different version of ChefSpec, you could change the
+# version number here and re-run the +bundle install+ command.
+gem 'chefspec', '3.4.0'
