@@ -187,15 +187,21 @@ the postfix cookbook from the community site:
   depends 'postfix'
   ```
 
-9. Upload the `acme-email_handler` cookbook to the Chef Server:
+9. include postfix recipe in `acme-email_handler::default`
+
+  ```ruby
+  include_recipe 'acme-email_handler::default'
+  ```
+
+10. Upload the `acme-email_handler` cookbook to the Chef Server:
 
   ```text
-  $ knife cookbook upload acme-chef_handler
+  $ knife cookbook upload acme-email_handler
   Uploading acme-chef_handler   [1.0.0]
   Uploaded 1 cookbook.
   ```
 
-10. Bootstrap your node with the `acme-email_handler` recipe in the run_list.
+11. Bootstrap your node with the `acme-email_handler` recipe in the run_list.
 You should have obtained a cloudshare account from the instructor.
 
   ```text
